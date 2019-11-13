@@ -1,0 +1,16 @@
+before_script:
+  - which java
+  - which mvn
+
+stages:
+  - build
+
+mvn-deploy:
+  stage: build
+  script:
+    - 'mvn clean deploy'
+
+# mvn-site-deploy:
+#   stage: build
+#   script:
+#     - 'mvn clean validate site-deploy'
